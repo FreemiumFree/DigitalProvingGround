@@ -1,0 +1,9 @@
+Service Category,Services Included,Cost ($),Percentage (%)
+Infrastructure (Compute),"AWS EC2, Lambda, Fargate",25.0,25.0
+Infrastructure (Storage),"S3, EBS, Data Lake",12.0,12.0
+Infrastructure (Networking),"VPC, Load Balancers, CDN",7.0,7.0
+Software Licensing,"Unreal Engine, Simulation Tools",23.0,23.0
+Data Processing,"GPU Computing, ML Training",18.0,18.0
+Security & Compliance,"WAF, Security Hub, Compliance",3.0,3.0
+Operations & Monitoring,"CloudWatch, CloudTrail, Support",4.0,4.0
+Buffer,Reserved for scaling/overages,8.0,8.0

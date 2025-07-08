@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Digital Proving Ground - Cost Visualizer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>AV Digital Proving Ground - Cost Visualizer</h1>
+            <p>Understand where your investment goes in a cloud-based autonomous vehicle testing platform</p>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="components">Component Details</button>
+            <button class="tab-btn" data-tab="scaling">Scaling Calculator</button>
+            <button class="tab-btn" data-tab="additional">Additional Costs</button>
+        </nav>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <div class="overview-layout">
+                <div class="chart-section">
+                    <div class="card">
+                        <div class="card__header">
+                            <h2>$100 Investment Breakdown</h2>
+                        </div>
+                        <div class="card__body">
+                            <div class="chart-container">
+                                <canvas id="costChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-section">
+                    <div class="card">
+                        <div class="card__header">
+                            <h3>Cost Summary</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="summary-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Total Investment</span>
+                                    <span class="stat-value">$100.00</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Largest Cost</span>
+                                    <span class="stat-value">Cloud Computing (25%)</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Compute Total</span>
+                                    <span class="stat-value">$43.00</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Buffer Remaining</span>
+                                    <span class="stat-value">$3.00</span>
+                                </div>
+                            </div>
+                            <div class="quick-actions">
+                                <button class="btn btn--primary" onclick="switchTab('components')">View Details</button>
+                                <button class="btn btn--secondary" onclick="switchTab('scaling')">Calculate Scaling</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__header">
+                            <h3>Key Insights</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="insights">
+                                <div class="insight">
+                                    <div class="insight-icon">💰</div>
+                                    <div class="insight-text">
+                                        <strong>Computing costs dominate</strong> - 43% of your budget goes to cloud and GPU computing
+                                    </div>
+                                </div>
+                                <div class="insight">
+                                    <div class="insight-icon">🔧</div>
+                                    <div class="insight-text">
+                                        <strong>Software licensing</strong> - 23% for simulation tools and Unreal Engine
+                                    </div>
+                                </div>
+                                <div class="insight">
+                                    <div class="insight-icon">📊</div>
+                                    <div class="insight-text">
+                                        <strong>Data costs</strong> - 19% for storage and bandwidth needs
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Component Details Tab -->
+        <div id="components" class="tab-content">
+            <div class="components-grid" id="componentsGrid">
+                <!-- Component cards will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Scaling Calculator Tab -->
+        <div id="scaling" class="tab-content">
+            <div class="scaling-layout">
+                <div class="calculator-section">
+                    <div class="card">
+                        <div class="card__header">
+                            <h2>Usage Calculator</h2>
+                        </div>
+                        <div class="card__body">
+                            <div class="calculator-inputs">
+                                <div class="input-group">
+                                    <label for="usageHours">Usage Hours per Month</label>
+                                    <input type="range" id="usageHours" min="10" max="720" value="50" class="slider">
+                                    <span class="slider-value" id="usageHoursValue">50</span>
+                                </div>
+                                <div class="input-group">
+                                    <label for="numUsers">Number of Users</label>
+                                    <input type="range" id="numUsers" min="1" max="50" value="5" class="slider">
+                                    <span class="slider-value" id="numUsersValue">5</span>
+                                </div>
+                                <div class="input-group">
+                                    <label for="dataVolume">Data Volume (GB/month)</label>
+                                    <input type="range" id="dataVolume" min="10" max="1000" value="100" class="slider">
+                                    <span class="slider-value" id="dataVolumeValue">100</span>
+                                </div>
+                            </div>
+                            <div class="cost-results">
+                                <div class="result-item">
+                                    <span class="result-label">Monthly Cost</span>
+                                    <span class="result-value" id="monthlyResult">$350</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Hourly Rate</span>
+                                    <span class="result-value" id="hourlyResult">$7.00</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Annual Cost</span>
+                                    <span class="result-value" id="annualResult">$4,200</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scenarios-section">
+                    <div class="card">
+                        <div class="card__header">
+                            <h3>Usage Scenarios</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="scenarios-table" id="scenariosTable">
+                                <!-- Scenarios will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Costs Tab -->
+        <div id="additional" class="tab-content">
+            <div class="additional-layout">
+                <div class="additional-grid" id="additionalGrid">
+                    <!-- Additional costs will be populated by JavaScript -->
+                </div>
+                <div class="additional-summary">
+                    <div class="card">
+                        <div class="card__header">
+                            <h3>Cost Impact</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="cost-breakdown">
+                                <div class="cost-item">
+                                    <span>Base Cost</span>
+                                    <span>$100.00</span>
+                                </div>
+                                <div class="cost-item">
+                                    <span>Additional Costs</span>
+                                    <span id="additionalTotal">$0.00</span>
+                                </div>
+                                <div class="cost-item total">
+                                    <span>Total Cost</span>
+                                    <span id="totalCost">$100.00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary btn--full-width" onclick="exportSummary()">Export Summary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

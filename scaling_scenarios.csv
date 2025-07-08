@@ -1,0 +1,6 @@
+Scenario,Monthly Cost ($),Hourly Rate ($),Primary Cost Driver
+Light Usage (10 hours/month),100,10.0,GPU compute and licensing
+Medium Usage (50 hours/month),350,7.0,Balanced compute and storage
+Heavy Usage (200 hours/month),1200,6.0,Heavy GPU and data processing
+Enterprise Usage (500 hours/month),2800,5.6,Enterprise licensing and support
+Continuous Usage (720 hours/month),4500,6.25,Infrastructure and data transfer

@@ -1,0 +1,11 @@
+Consideration,Potential Additional Cost ($),Description
+Data Ingress from Vehicles,50,Real-time data streaming from test vehicles
+Machine Learning Model Training,200,Training AI models for autonomous driving
+Multi-Region Deployment,150,Global deployment for reduced latency
+High Availability & Disaster Recovery,100,Backup systems and failover mechanisms
+Compliance & Audit Requirements,75,Meeting automotive industry regulations
+Third-Party API Integrations,25,Integration with vehicle systems and sensors
+Custom Development & Maintenance,300,Custom feature development and updates
+User Training & Support,50,Training materials and support staff
+Simulation Asset Licensing,100,High-fidelity 3D models and environments
+Performance Optimization,75,Performance tuning and optimization services

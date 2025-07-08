@@ -1,0 +1,11 @@
+Component,Cost ($),Percentage (%),Description
+Cloud Computing (AWS/Azure),25.0,25.0,"EC2 instances, Lambda functions, API Gateway"
+GPU Computing,18.0,18.0,P3/G4 instances for ML training and inference
+Data Storage,12.0,12.0,S3 storage for simulation data and assets
+Unreal Engine License,8.0,8.0,Unreal Engine subscription for simulation
+Simulation Software,15.0,15.0,Specialized AV simulation tools and licenses
+Data Transfer/Bandwidth,7.0,7.0,Data ingress/egress and CDN costs
+Asset Management,5.0,5.0,Asset versioning and management systems
+Security & Compliance,3.0,3.0,Security monitoring and compliance tools
+Platform Operations,4.0,4.0,"Load balancing, monitoring, logging"
+Remaining Balance,3.0,3.0,Buffer for unexpected costs and scaling
